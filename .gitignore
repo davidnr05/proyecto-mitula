@@ -1,0 +1,14 @@
+# Ignorar dependencias y archivos generados
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignorar despliegues de Zappa
+.zappa/
+.zappa_settings.json
+
+# Archivos de logs
+logs/
+*.log
+
