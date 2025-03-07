@@ -3,10 +3,12 @@ import requests
 import datetime
 
 def scrape_mitula(event, context):
+    print("Ejecutando scrape_mitula...")
+
     base_url = "https://casas.mitula.com.co/find?operationType=sell&propertyType=mitula_studio_apartment&geoId=mitula-CO-poblacion-0000014156&text=Bogot%C3%A1%2C++%28Cundinamarca%29"
     fecha_hoy = datetime.datetime.now().strftime("%Y-%m-%d")
     s3 = boto3.client('s3')
-    bucket_name = "landing-casas-059"  # Cambia por tu bucket S3
+    bucket_name = "landing-casas-059"  # Cambia según tu bucket
 
     for page in range(1, 11):
         url = f"{base_url}?p={page}"
