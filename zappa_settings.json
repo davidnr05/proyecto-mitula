@@ -1,6 +1,6 @@
 {
     "dev": {
-        "app_function": "handler.scrape_mitula",
+        "app_function": "app.scrape_mitula",
         "aws_region": "us-east-1",
         "exclude": [
             "boto3",
@@ -19,7 +19,7 @@
         "role_name": "LabRole"
         "events": [
           {
-            "function": "handler.scrape_mitula",
+            "function": "app.scrape_mitula",
             "event_source": {
                   "arn":  "arn:aws:s3:::landing-casas-059",
                   "events": [
